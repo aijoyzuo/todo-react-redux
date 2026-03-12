@@ -5,7 +5,7 @@ export default function TodoList(){
     const todos = useSelector((state) => state.todos.items)
 
     if(todos.length === 0){
-        return<p>目前沒有待辦事項</p>
+        return<p className="text-muted ms-2 my-2">目前沒有待辦事項</p>
     }
 
     return(

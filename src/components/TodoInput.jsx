@@ -22,15 +22,17 @@ export default function TodoInput(){
     }
 
     return(
-        <div className="todo-input-wrapper">
+        <div className="row gap-2 justify-content-center">
             <input
             type="text"
             value={text}
             onChange={(event)=>setText(event.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="請輸入待辦事項"
+            className="col-8 input-group-text text-start"
             />
-            <button onClick={handleAddTodo}>新增</button>
+            <button onClick={handleAddTodo}
+            className="col-3 btn btn-warning">新增</button>
         </div>
     )
 }
