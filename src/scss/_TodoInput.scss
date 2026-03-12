@@ -1,0 +1,12 @@
+.todo-input-wrapper {
+  display: flex;
+  input {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  button {
+    background: #ff1c1c;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
+}
