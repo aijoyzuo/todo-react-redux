@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { toggleTodo, editTodo, deleteTodo } from "../features/todos/todoSlice";
+import { toggleTodo, editTodo, deleteTodo } from "../../features/todos/todoSlice";
 import { useState } from "react";
 
 export default function TodoItem({ todo }) {
@@ -26,8 +26,8 @@ export default function TodoItem({ todo }) {
         setIsEditing(false);
     };
     return (
-        <li className="todo-item my-2">
-            <div className="row gap-2 align-items-center">
+        <li className="todo-item my-2 me-1">
+            <div className="d-flex gap-1 align-items-center">
                 {isEditing ? (
                     <>
                         <input
@@ -37,11 +37,11 @@ export default function TodoItem({ todo }) {
                             onChange={(e) => setEditText(e.target.value)}
                         />
 
-                        <button onClick={handleSave} className="col-auto btn btn-success">
+                        <button onClick={handleSave} className="col-auto btn btn-success" style={{  color: "white", backgroundColor: "#4CAF50"   }}>
                             儲存
                         </button>
 
-                        <button onClick={handleCancel} className="col-auto btn btn-warning">
+                        <button onClick={handleCancel} className="col-auto btn btn-warning" style={{ color: "#333", backgroundColor: "#FFC107"  }}>
                             取消
                         </button>
                     </>
@@ -60,14 +60,14 @@ export default function TodoItem({ todo }) {
 
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="col-auto btn btn-secondary"
+                            className="col-auto btn " style={{ color: "white", backgroundColor: "#FF8FAB"  }}
                         >
                             編輯
                         </button>
 
                         <button
                             onClick={() => dispatch(deleteTodo(todo.id))}
-                            className="col-auto btn btn-danger"
+                            className="col-auto btn" style={{ color: "white", backgroundColor: "#FF5252" }}
                         >
                             刪除
                         </button>

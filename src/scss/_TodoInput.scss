@@ -10,3 +10,20 @@
     padding: 0.5rem 1rem;
   }
 }
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+//主色 (Primary)	蜜蜂黃	#ffdb88
+//深黃 (Hover)	琥珀黃	#FFB300
+//背景	淡奶油黃	#FFF9E6
+//編輯	柔粉	#FF8FAB
+//儲存	清新綠	#4CAF50
+//刪除	珊瑚紅	#FF5252
+//文字	深灰	#333

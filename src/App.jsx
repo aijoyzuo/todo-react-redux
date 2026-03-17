@@ -1,16 +1,17 @@
-import TodoInput from "./components/TodoInput";
-import TodoList from "./components/TodoList";
+import { useState } from "react";
+import HomePage from "./pages/HomePage";
+import TodoPage from "./pages/TodoPage"
 
 export default function App() {
+
+const [isLogin, setIsLogin] = useState(false)
+
   return (
-    <div className=" row justify-content-center ">
-      <div className="col-12 col-md-6 col-lg-4">
-        <div className="app m-4 p-4">
-          <h1>TODOLIST</h1>
-          <TodoInput />
-          <TodoList />
-        </div>
-      </div>
-    </div>
+    <>
+      {isLogin
+        ? <TodoPage TodoPage setIsLogin={setIsLogin}/>
+        : <HomePage setIsLogin={setIsLogin} />
+      }
+    </>
   )
 }
