@@ -47,7 +47,7 @@ export default function LoginForm({ setIsLogin }) {
 
   return (
     <div>
-      <h2>會員登入</h2>
+      <h2>隨手記：會員登入</h2>
 
       <input
         type="email"

@@ -1,9 +1,11 @@
 .todo-input-wrapper {
   display: flex;
+
   input {
     flex: 1;
     padding: 0.5rem;
   }
+
   button {
     background: #ff1c1c;
     color: white;
@@ -20,10 +22,14 @@
   opacity: 0.9;
 }
 
-//主色 (Primary)	蜜蜂黃	#ffdb88
-//深黃 (Hover)	琥珀黃	#FFB300
-//背景	淡奶油黃	#FFF9E6
-//編輯	柔粉	#FF8FAB
-//儲存	清新綠	#4CAF50
-//刪除	珊瑚紅	#FF5252
-//文字	深灰	#333
+.olcustom {
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: var(--todo-max-height-mobile, 550px);
+}
+
+@media (min-width: 768px) {
+  .olcustom {
+    max-height: var(--todo-max-height-desktop, 425px);
+  }
+}

@@ -37,11 +37,11 @@ export default function TodoItem({ todo }) {
                             onChange={(e) => setEditText(e.target.value)}
                         />
 
-                        <button onClick={handleSave} className="col-auto btn btn-success" style={{  color: "white", backgroundColor: "#4CAF50"   }}>
+                        <button onClick={handleSave} className="col-auto btn" style={{  fontSize:"14px", color: "black", backgroundColor: "#FFC107"   }}>
                             儲存
                         </button>
 
-                        <button onClick={handleCancel} className="col-auto btn btn-warning" style={{ color: "#333", backgroundColor: "#FFC107"  }}>
+                        <button onClick={handleCancel} className="col-auto btn" style={{ fontSize:"14px", color: "#ffffff", backgroundColor: "#dc3545"  }}>
                             取消
                         </button>
                     </>
@@ -60,14 +60,14 @@ export default function TodoItem({ todo }) {
 
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="col-auto btn " style={{ color: "white", backgroundColor: "#FF8FAB"  }}
+                            className="col-auto btn" style={{ fontSize:"14px", color: "white", backgroundColor: "#aaa082"  }}
                         >
                             編輯
                         </button>
 
                         <button
                             onClick={() => dispatch(deleteTodo(todo.id))}
-                            className="col-auto btn" style={{ color: "white", backgroundColor: "#FF5252" }}
+                            className="col-auto btn" style={{ fontSize:"14px", color: "white", backgroundColor: "#68592e" }}
                         >
                             刪除
                         </button>

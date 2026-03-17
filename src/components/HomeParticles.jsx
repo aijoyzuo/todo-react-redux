@@ -39,7 +39,7 @@ export default function HomeParticles() {
         },
         move: {
           enable: true,
-          speed: 1.5,
+          speed: 1,
           outModes: {
             default: "out",
           },

@@ -1,16 +1,22 @@
 import { useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
 
-export default function TodoList() {
-    const todos = useSelector((state) => state.todos.items)
+export default function TodoList({
+    maxHeightMobile = "550px",
+    maxHeightDesktop = "425px",
+}) {
+    const todos = useSelector((state) => state.todos.items);
 
     if (todos.length === 0) {
-        return <p className="text-muted ms-2 my-2">目前沒有待辦事項</p>
+        return <p className="text-muted ms-2 my-2">目前沒有待辦事項</p>;
     }
-
     return (
         <>
-            <ol className="bg-white mt-2" style={{borderRadius:"8px"}}>
+            <ol className="bg-white mt-2 olcustom"
+                style={{
+                    "--todo-max-height-mobile": maxHeightMobile,
+                    "--todo-max-height-desktop": maxHeightDesktop,
+                }}>
                 {todos.map((todo) => (
                     <TodoItem key={todo.id} todo={todo} />
                 ))}

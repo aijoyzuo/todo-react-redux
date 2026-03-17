@@ -57,7 +57,7 @@ export default function RegisterForm({ setIsLogin }) {
 
   return (
     <div>
-      <h2>註冊帳號</h2>
+      <h2>隨手記：註冊帳號</h2>
 
       <input
         type="email"

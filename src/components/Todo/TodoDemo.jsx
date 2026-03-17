@@ -2,18 +2,21 @@ import DemoNotice from "../DemoNotice"
 import TodoInput from "./TodoInput"
 import TodoList from "./TodoList"
 
-export default function TodoDemo(){
+export default function TodoDemo() {
 
-  return(
+  return (
 
     <div>
 
       <h2>Try Demo</h2>
 
-      <DemoNotice/>
+      <DemoNotice />
 
-      <TodoInput/>
-      <TodoList/>
+      <TodoInput />
+      <TodoList        
+        maxHeightMobile="290px"
+        maxHeightDesktop="380px"
+      />
 
     </div>
 
