@@ -38,14 +38,13 @@ export default function RegisterForm({ setIsLogin }) {
           headers: { "Content-Type": "application/json" },
         }
       );
-
-      // 註冊成功 → 直接登入
+     
       let token = res.headers.authorization;
       if (token?.startsWith("bearer ")) token = token.split(" ")[1];
       localStorage.setItem("token", token);
       localStorage.setItem("nickname", nickname);
 
-      setIsLogin(true); // 切換到 TodoPage
+      setIsLogin(true); 
     } catch (err) {
       setError(
         err.response?.data?.error?.join(", ") || "註冊失敗，請稍後再試"
