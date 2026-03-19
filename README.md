@@ -32,7 +32,7 @@ GitHub: https://github.com/aijoyzuo/todo-react-redux
 ---
 
 ##  Project Structure
-
+```text
 src
 ┣ app
 ┃ ┗ store.js
@@ -43,6 +43,7 @@ src
 ┣ pages
 ┣ App.jsx
 ┗ main.jsx
+```
 
 ## 🔧 Installation
 
